@@ -21,7 +21,7 @@ import uk.org.freedonia.fuzzunit.annotations.FuzzTest;
 
 
 
-public class FuzzUnitTestRunner  extends ParentRunner<FrameworkMethod>{
+public class FuzzUnitTestRunner  extends ParentRunner<FrameworkMethod> {
 
 	private List<FuzzTestCase> testCases;
 	private String name;

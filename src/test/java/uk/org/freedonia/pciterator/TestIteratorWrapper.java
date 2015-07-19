@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -18,7 +19,7 @@ import uk.org.freedonia.fuzzunit.annotations.FuzzTypes;
 @RunWith( FuzzUnit.class )
 public class TestIteratorWrapper {
 	
-	
+	@Ignore
 	@Test
 	public void testIteratorWrapper() throws IOException {
 		List<String> data = getRandomStringListOfSize( 100 );
@@ -42,7 +43,7 @@ public class TestIteratorWrapper {
 	}
 
 
-
+	@Ignore
 	@FuzzTest( iterationCount = 2,
 			fuzzLists = @FuzzList( 
 					argOrder = 0,

@@ -59,7 +59,9 @@ public class XMLResultWriter implements ResultWriter {
 			HashMap<String, RunResult> resultMap, Document document ) {
 		Element statsElement = document.createElement("TestResults");
 		for ( RunResult runResult : resultMap.values() ) {
-			statsElement.appendChild( getTestResult( result, runResult, document ) );
+			if ( runResult.getTestCase() != null ) {
+				statsElement.appendChild( getTestResult( result, runResult, document ) );
+			}
 		}
 		return statsElement;
 	}
